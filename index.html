@@ -222,22 +222,23 @@
     <div class="divider">⁕ ⁕ ⁕</div>
 
     <!-- ===================== -->
-    <!--       SCENE 1 (START) -->
+    <!--    SCENE 1 (START)    -->
     <!-- ===================== -->
     <div class="scene active" id="scene1">
-        <div class="scene-title">The Forest Edge</div>
+        <div class="scene-title">The Forest's Edge</div>
         <div class="scene-text">
             You stand at the edge of a vast, dark forest. The trees loom tall and twisted, 
             their branches blocking out the moon. Somewhere deep within, you can hear 
             the faint sound of <em>running water</em> — and something else. 
             A low, rhythmic <em>drumming</em>.
             <br><br>
-            Your village sent you here to find the missing merchant. You grip your lantern tightly.
+            You grip your lantern tightly. You're here for a reason, but you can't remember what it is.
+            In fact, you can't even remember what your name is. What was it?
         </div>
         <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene2')">Follow the sound of the drumming</button>
-            <button class="choice-btn" onclick="goTo('scene3')">Follow the sound of the water</button>
-            <button class="choice-btn" onclick="goTo('scene4')">Make camp and wait until morning</button>
+            <button class="choice-btn" onclick="goTo('masonWaters')">Mason Waters</button>
+            <button class="choice-btn" onclick="goTo('cameronGietzen')">Cameron Gietzen</button>
+            <button class="choice-btn" onclick="goTo('henryHarkins')">Henry Harkins</button>
         </div>
     </div>
 
@@ -247,9 +248,9 @@
     <div class="scene" id="scene2">
         <div class="scene-title">You Wake Up</div>
         <div class="scene-text">
-            You push through tangled undergrowth, following the deep, steady beat. 
-            After an hour of walking, you emerge into a <em>moonlit clearing</em>. 
-            A circle of cloaked figures surrounds a bonfire, drumming in unison.
+            <em>Gold updated.</em>
+            Your alarm is <em>blaring</em>. The room is grey with the faint light of twilight.
+            Shit. You're late for school, you haven't done the reading, <em>and you're on call!</em>
             <br><br>
             One of them turns and notices you. They pull back their hood — 
             it's an <em>old woman</em> with kind eyes. "We wondered when a traveler would come," she says.
@@ -261,241 +262,6 @@
             <button class="choice-btn" onclick="goTo('scene7')">Back away slowly into the trees</button>
         </div>
     </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 3         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene3">
-        <div class="scene-title">The River</div>
-        <div class="scene-text">
-            The sound of water leads you to a <em>wide, dark river</em>. 
-            The current is strong, but a rickety rope bridge spans the gap. 
-            On the far bank, you can just make out the faint glow of a <em>lantern</em> — 
-            and what looks like a cart with a broken wheel.
-            <br><br>
-            The merchant? The bridge creaks ominously in the wind. 
-            Downriver, a small rowboat is tied to a tree.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene8')">Cross the rope bridge quickly</button>
-            <button class="choice-btn" onclick="goTo('scene9')">Take the rowboat downriver and look for a safer crossing</button>
-            <button class="choice-btn" onclick="goTo('scene10')">Call out across the river</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 4         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene4">
-        <div class="scene-title">The Long Night</div>
-        <div class="scene-text">
-            You find a sheltered hollow at the forest's edge and build a small fire. 
-            It's a wise decision — the forest at night is <em>no place for the unprepared</em>. 
-            As you rest, a fox trots up and sniffs at your pack.
-            <br><br>
-            Tied around its neck is a small piece of cloth — 
-            the same blue pattern as the missing merchant's coat. 
-            The fox watches you with <em>unnervingly intelligent eyes</em>.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene2')">Follow the fox into the forest</button>
-            <button class="choice-btn" onclick="goTo('scene3')">Take the cloth and wait for morning to investigate</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 5         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene5">
-        <div class="scene-title">The Circle of Fire</div>
-        <div class="scene-text">
-            You sit by the fire. The old woman hands you a warm bowl of broth 
-            and tells you the merchant stumbled upon an <em>old tomb</em> to the north 
-            and went inside seeking treasure. He has not come out.
-            <br><br>
-            She presses a <em>silver amulet</em> into your hand. 
-            "The tomb is cursed. This will protect you — but only once."
-            She points north. "Go before sunrise."
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene-ending-good')">Head north to the tomb</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 6         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene6">
-        <div class="scene-title">A Cold Reaction</div>
-        <div class="scene-text">
-            The old woman's kind expression fades. The drumming stops. 
-            Every hooded figure turns to look at you in silence.
-            <br><br>
-            "Manners," she says quietly, "cost nothing." 
-            She turns her back on you. No one speaks. 
-            The figures resume their drumming as if you no longer exist.
-            <br><br>
-            You are alone in the dark forest again, no closer to finding the merchant.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene3')">Head toward the sound of water instead</button>
-            <button class="choice-btn" onclick="goTo('scene-ending-neutral')">Return to the village and report what you saw</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 7         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene7">
-        <div class="scene-title">Into the Dark</div>
-        <div class="scene-text">
-            You back into the trees, heart pounding. But the forest has shifted — 
-            the path you came from is <em>gone</em>. The trees look different. 
-            Unfamiliar. The drumming fades behind you.
-            <br><br>
-            You walk for what feels like hours. Then — a light ahead. 
-            A lantern hanging from a post, and beneath it, a <em>small wooden door</em> 
-            set into the base of an enormous oak.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene-ending-neutral')">Knock on the door</button>
-            <button class="choice-btn" onclick="goTo('scene3')">Ignore the door and keep searching</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 8         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene8">
-        <div class="scene-title">The Bridge</div>
-        <div class="scene-text">
-            You step onto the rope bridge. It sways wildly. 
-            Halfway across, you hear a loud <em>crack</em> — 
-            one of the main ropes snaps. You lunge forward, 
-            scrambling hand over hand as the bridge collapses behind you.
-            <br><br>
-            You <em>barely</em> make it to the other side, scraping your hands on the rocks. 
-            But you're across. The lantern ahead flickers — 
-            and you hear a weak voice call out: <em>"Hello? Is someone there?"</em>
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene-ending-good')" onclick="addGold(-5)">Run toward the voice</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 9         -->
-    <!-- ===================== -->
-    <div class="scene" id="scene9">
-        <div class="scene-title">Downriver</div>
-        <div class="scene-text">
-            The rowboat is old but sturdy. You row downriver for twenty minutes 
-            until you find a wide, shallow ford. You cross easily and double back along the far bank.
-            <br><br>
-            It takes longer, but you arrive safely at the cart. 
-            Beside it, wrapped in a blanket and nursing a <em>twisted ankle</em>, 
-            is the merchant. He looks up with enormous relief. 
-            <em>"I thought no one was coming,"</em> he whispers.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene-ending-good')">Help him back to the village</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--       SCENE 10        -->
-    <!-- ===================== -->
-    <div class="scene" id="scene10">
-        <div class="scene-title">No Answer</div>
-        <div class="scene-text">
-            You call out. Your voice echoes across the water and into the dark trees beyond. 
-            The lantern on the far bank <em>goes out</em>.
-            <br><br>
-            Silence. Then — something large moves in the water beneath the bridge. 
-            A long shadow passes under the surface. 
-            You take a step back from the riverbank.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene8')">Cross the bridge anyway</button>
-            <button class="choice-btn" onclick="goTo('scene9')">Take the rowboat instead</button>
-            <button class="choice-btn" onclick="goTo('scene-ending-bad')">Run</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--    ENDING: GOOD       -->
-    <!-- ===================== -->
-    <div class="scene" id="scene-ending-good">
-        <div class="ending-label good">✦ Good Ending</div>
-        <div class="scene-title">The Merchant Found</div>
-        <div class="scene-text">
-            With the merchant safe beside you, you navigate back through the forest 
-            as dawn begins to paint the sky gold. The trees seem <em>less threatening</em> in the light.
-            <br><br>
-            The village erupts in celebration when you return. 
-            The merchant, grateful beyond words, presses a heavy purse of coins into your hands. 
-            <em>"You saved my life,"</em> he says simply.
-            <br><br>
-            That night, by the fire, you find yourself glancing toward the dark tree line — 
-            wondering what other secrets the forest holds.
-        </div>
-        <div class="choices">
-            <button class="restart-btn" onclick="restart()">Play Again</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--    ENDING: BAD        -->
-    <!-- ===================== -->
-    <div class="scene" id="scene-ending-bad">
-        <div class="ending-label bad">✦ Bad Ending</div>
-        <div class="scene-title">Lost in the Dark</div>
-        <div class="scene-text">
-            You run. The forest closes in around you. 
-            Every direction looks the same — twisted roots, dark bark, no stars above.
-            <br><br>
-            By morning, you are utterly lost. The merchant is never found. 
-            Travelers who pass the forest edge in the years that follow 
-            sometimes hear two voices calling out from the dark — 
-            <em>both of them asking for help.</em>
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene11')">Run</button>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!--   ENDING: NEUTRAL     -->
-    <!-- ===================== -->
-    <div class="scene" id="scene-ending-neutral">
-        <div class="ending-label neutral">✦ Neutral Ending</div>
-        <div class="scene-title">An Incomplete Journey</div>
-        <div class="scene-text">
-            You return to the village empty-handed, but alive. 
-            The merchant will be fine... probably.
-            <br><br>
-        </div>
-        <div class="choices">
-            <button class="restart-btn" onclick="restart()">Go to sleep</button>
-        </div>
-    </div>
-    <!-- ===================== -->
-    <!--       SCENE 11        -->
-    <!-- ===================== -->
-    <div class="scene" id="scene10">
-        <div class="scene-title">You Wake Up</div>
-        <div class="scene-text">
-            Your alarm is blaring. The faintest light can be seen through the thin curtains.
-            <br><br>
-            Shit. You're late for law school, you haven't read for class, <em>and you're on call</em>.
-        </div>
-        <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene8')">Cross the bridge anyway</button>
-            <button class="choice-btn" onclick="goTo('scene9')">Take the rowboat instead</button>
-            <button class="choice-btn" onclick="goTo('scene-ending-bad')">Run</button>
-        </div>
-    </div>
-
 </div>
 
 <script>
