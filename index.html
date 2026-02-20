@@ -236,30 +236,62 @@
             In fact, you can't even remember what your name is. What was it?
         </div>
         <div class="choices">
-            <button class="choice-btn" onclick="goTo('masonWaters')">Mason Waters</button>
-            <button class="choice-btn" onclick="goTo('cameronGietzen')">Cameron Gietzen</button>
+            <button class="choice-btn" onclick="goTo('masonWaters', undefined, -100000)">Mason Waters</button>
+            <button class="choice-btn" onclick="goTo('comingSoon')">Cameron Gietzen</button>
             <button class="choice-btn" onclick="goTo('henryHarkins')">Henry Harkins</button>
         </div>
     </div>
 
     <!-- ===================== -->
-    <!--       SCENE 2         -->
+    <!--     masonWaters       -->
     <!-- ===================== -->
-    <div class="scene" id="scene2">
+    <div class="scene" id="masonWaters">
         <div class="scene-title">You Wake Up</div>
         <div class="scene-text">
-            <em>Gold updated.</em>
-            Your alarm is <em>blaring</em>. The room is grey with the faint light of twilight.
-            Shit. You're late for school, you haven't done the reading, <em>and you're on call!</em>
+            <em>Gold updated. (-100,000)</em>
             <br><br>
-            One of them turns and notices you. They pull back their hood — 
-            it's an <em>old woman</em> with kind eyes. "We wondered when a traveler would come," she says.
-            "We know where the merchant is. But first — will you share our fire?"
+            Your alarm is <em>blaring</em>. The grey of twilight dimly lights the room. <br>
+            Shit. You're late for school, you haven't done the reading, ...<em>and you're on call!</em>
+            <br><br>
+            Ya got no gumption. 
         </div>
         <div class="choices">
-            <button class="choice-btn" onclick="goTo('scene5')">Accept her offer and sit by the fire</button>
-            <button class="choice-btn" onclick="goTo('scene6')">Demand she tell you where the merchant is immediately</button>
-            <button class="choice-btn" onclick="goTo('scene7')">Back away slowly into the trees</button>
+            <button class="choice-btn" onclick="goTo('comingSoon')">Slap the snooze button and go back to sleep</button>
+            <button class="choice-btn" onclick="goTo('comingSoon')">Jump out of bed and rush to school</button>
+        </div>
+    </div>
+    <!-- ===================== -->
+    <!--     henryHarkins      -->
+    <!-- ===================== -->
+    <div class="scene" id="henryHarkins">
+        <div class="scene-title">You Remember Now</div>
+        <div class="scene-text">
+            That's right. You're fricken <em>Hard</em> Henry Harkins. <br>
+            You regrip your latern, flexing.<br>
+            Your shirt strains then <em>rips</em> as your muscles <em>bulge</em>.
+            <br><br>
+            Who da man? You dah man.
+        </div>
+        <div class="choices">
+            <button class="choice-btn" onclick="goTo('comingSoon')">Flex one more time, for the girls in the back</button>
+            <button class="choice-btn" onclick="goTo('comingSoon')">Follow the river downstream</button>
+            <button class="choice-btn" onclick="goTo('comingSoon')">Swim across the river</button>
+        </div>
+    </div>
+    <!-- ===================== -->
+    <!--     comingSoon       -->
+    <!-- ===================== -->
+    <div class="scene" id="comingSoon">
+        <div class="scene-title">Coming Soon</div>
+        <div class="scene-text">
+            <em>I'm working on this.</em>
+        </div>
+        <br><br>
+        Tip? ... please?
+        <div class="choices">
+            <button class="choice-btn" onclick="window.location.href='https://venmo.com/u/Cameron-Gietzen'">Yes please. $100</button>
+            <button class="choice-btn" onclick="window.location.href='https://venmo.com/u/Cameron-Gietzen'">Yes please. $50</button>
+            <button class="choice-btn" onclick="window.location.href='https://venmo.com/u/Cameron-Gietzen'">Yes please. $20</button>
         </div>
     </div>
 </div>
@@ -269,7 +301,7 @@
     let health = 100;
     let gold = 10;
 
-    function goTo(sceneId) {
+    function goTo(sceneId, healthChange, moneyChange) {
         // Hide all scenes
         document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
         // Show the target scene
@@ -277,9 +309,13 @@
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Trigger effects based on which scene loads
-        if (sceneId === 'scene11') addHealth(-50); // bridge crossing costs health
-        if (sceneId === 'scene1') addGold(-100010);    // reward for being polite
+        // Trigger effects based on which scene loads\
+        if (healthChange !== undefined) {
+            addHealth(healthChange)
+        }
+        if (moneyChange !== undefined) {
+            addGold(moneyChange)
+        }
     }
 
     function addHealth(amount) {
@@ -288,7 +324,7 @@
     }
 
     function addGold(amount) {
-        gold = Math.max(0, gold + amount);
+        gold = (gold + amount);
         document.getElementById('gold').textContent = gold;
     }
 
